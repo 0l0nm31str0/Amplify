@@ -1,0 +1,43 @@
+Now I get this error: 
+
+observer method dataChanged_ not defined
+
+vLq @ rs=AGKMywHgpf22tCIbCeHELJBJnv_Ot6CaqQ:1734Understand this warning
+
+content.js:437 💰 Amplify: Button clicked!
+
+content.js:440 💰 Amplify: Phantom ready? true
+
+content.js:452 🔍 Amplify: Checking Phantom status...
+
+content.js:141 📤 Amplify: Sending message AMPLIFY_CHECK_PHANTOM Object
+
+content.js:152 📤 Amplify: Posting message: Object
+
+content.js:91 📨 Amplify: Received message: Object
+
+inject.js:31 💉 Amplify: Processing message: AMPLIFY_CHECK_PHANTOM
+
+inject.js:59 💉 Amplify: Phantom check response: Object
+
+content.js:91 📨 Amplify: Received message: Object
+
+content.js:101 ✅ Amplify: Phantom is available
+
+content.js:109 Uncaught TypeError: this.resolveMessageHandler is not a function
+
+    at content.js:109:16Understand this error
+
+inject.js:31 💉 Amplify: Processing message: AMPLIFY_PHANTOM_STATUS
+
+inject.js:47 💉 Amplify: Unknown message type: AMPLIFY_PHANTOM_STATUS
+
+content.js:158 ❌ Amplify: Message timeout for AMPLIFY_CHECK_PHANTOM (key: check_phantom)
+
+(anonymous) @ content.js:158Understand this error
+
+content.js:520 ❌ Amplify: Error: Error: Message timeout: No response for AMPLIFY_CHECK_PHANTOM
+
+    at content.js:160:18
+
+handleTipClick @ content.js:520Understand this error

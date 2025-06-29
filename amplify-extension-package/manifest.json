@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Amplify - YouTube Creator Tips",
+  "version": "1.0.0",
+  "description": "Tip your favorite YouTube creators with USDC on Solana",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "http://localhost:8000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "Amplify - Tip Creators"
+  }
+}

@@ -1,0 +1,122 @@
+/* Amplify Button Styles */
+.amplify-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 0 8px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.amplify-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+  background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+}
+
+.amplify-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.amplify-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.amplify-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.amplify-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.amplify-text {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.amplify-amount {
+  font-size: 11px;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 2px;
+}
+
+/* Button States */
+.amplify-loading {
+  background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+}
+
+.amplify-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.amplify-error {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* Spinner Animation */
+.amplify-spinner {
+  display: inline-block;
+  animation: amplify-spin 1s linear infinite;
+}
+
+@keyframes amplify-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .amplify-button {
+    padding: 6px 12px;
+    margin: 0 4px;
+  }
+  
+  .amplify-text {
+    display: none;
+  }
+  
+  .amplify-amount {
+    font-size: 10px;
+  }
+}
+
+/* Integration with YouTube's dark theme */
+@media (prefers-color-scheme: dark) {
+  .amplify-button {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Notification styles */
+.amplify-notification {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  animation: amplify-slide-in 0.3s ease-out;
+}
+
+@keyframes amplify-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
